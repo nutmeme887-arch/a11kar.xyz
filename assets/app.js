@@ -2,7 +2,7 @@ const words = {"en": {"home": "Home", "features": "Features", "preview": "App pr
 
 Object.assign(words.en, {"installHelp": "Installation help", "helpTitle": "Having trouble installing?", "helpIntro": "Match the message on your phone with the screenshots below. Tap a screenshot to view it full size.", "fullGuide": "View installation guide", "scanTitle": "App scan recommended", "scanText": "Open “More details” to see the available options. “Scan app” checks the APK; the second screenshot shows “Install without scanning”.", "blockTitle": "App blocked to protect your device", "blockText": "Open “More details” to read the warning. The next screenshot shows the expanded dialog and “Install anyway” option.", "installNote": "Only continue if you trust the APK source and understand the warning. Keep Play Protect enabled. Screens and available options may vary by device.", "detailStep": "Open More details", "scanStep": "Expanded scan options", "blockStep": "Expanded installation options", "telegramJoin": "Join Telegram channel", "telegramTitle": "Stay connected with 1Kar.", "telegramText": "Join our Telegram channel for app updates and announcements.", "helpTag": "1KAR / INSTALLATION HELP", "retryTitle": "Still unable to install?", "retryText": "Check that the APK finished downloading and there is enough free storage. If you are unsure which build to use, choose Universal on the download page."});
 Object.assign(words.my, {"installHelp": "ထည့်သွင်းရန် အကူအညီ", "helpTitle": "အက်ပ် ထည့်သွင်းမရဘူးလား။", "helpIntro": "သင့်ဖုန်းတွင် ပြသော စာသားနှင့် အောက်ပါပုံများကို တိုက်ကြည့်ပါ။ ပုံအပြည့်အစုံကို ကြည့်ရန် ပုံကို နှိပ်ပါ။", "fullGuide": "ထည့်သွင်းနည်း လမ်းညွှန်ကို ကြည့်ရန်", "scanTitle": "App scan recommended ပြနေပါက", "scanText": "ရွေးချယ်စရာများကို ကြည့်ရန် “More details” ကို နှိပ်ပါ။ “Scan app” က APK ကို စစ်ဆေးပေးသည်။ ဒုတိယပုံတွင် “Install without scanning” ကို ပြထားသည်။", "blockTitle": "App blocked to protect your device ပြနေပါက", "blockText": "သတိပေးချက်ကို ဖတ်ရန် “More details” ကို နှိပ်ပါ။ နောက်ပုံတွင် အသေးစိတ်နှင့် “Install anyway” ရွေးချယ်စရာကို ပြထားသည်။", "installNote": "APK ရရှိသည့်နေရာကို ယုံကြည်ပြီး သတိပေးချက်ကို နားလည်မှသာ ဆက်လုပ်ပါ။ Play Protect ကို ဖွင့်ထားပါ။ စက်အလိုက် မျက်နှာပြင်နှင့် ရွေးချယ်စရာများ ကွာခြားနိုင်သည်။", "detailStep": "More details ကို ဖွင့်ပါ", "scanStep": "စစ်ဆေးမှု ရွေးချယ်စရာများ", "blockStep": "ထည့်သွင်းမှု ရွေးချယ်စရာများ", "telegramJoin": "Telegram Channel သို့ ဝင်ရန်", "telegramTitle": "1Kar နှင့် အဆက်အသွယ်မပြတ်ပါစေနှင့်။", "telegramText": "အက်ပ် အပ်ဒိတ်နှင့် ကြေညာချက်များအတွက် Telegram Channel သို့ ဝင်ပါ။", "helpTag": "1KAR / ထည့်သွင်းရန် အကူအညီ", "retryTitle": "ထည့်သွင်းမရသေးဘူးလား။", "retryText": "APK ဒေါင်းလုဒ်ပြီးစီးမှုနှင့် ဖုန်းတွင် နေရာလွတ်ရှိမှုကို စစ်ဆေးပါ။ ဘယ်ဖိုင်သုံးရမည်ကို မသေချာပါက ဒေါင်းလုဒ်စာမျက်နှာတွင် Universal ကို ရွေးပါ။"});
-const packages = {"universal": {"label": "Universal APK", "file": "1kar-universal-v1.0.0.apk", "size": "53.6 MiB", "desc": "unidesc"}, "arm64": {"label": "ARM64", "file": "1kar-arm64-v8a-v1.0.0.apk", "size": "19.7 MiB", "desc": "arm64"}, "arm32": {"label": "ARMv7", "file": "1kar-armeabi-v7a-v1.0.0.apk", "size": "17.3 MiB", "desc": "arm32"}, "x86": {"label": "x86_64", "file": "1kar-x86_64-v1.0.0.apk", "size": "21.1 MiB", "desc": "x86"}};
+const packages = {"universal": {"label": "Universal APK", "url": "https://t.me/a11karapp/9", "size": "53.6 MiB", "desc": "unidesc"}, "arm64": {"label": "ARM64", "file": "1kar-arm64-v8a-v1.0.0.apk", "size": "19.7 MiB", "desc": "arm64"}, "arm32": {"label": "ARMv7", "file": "1kar-armeabi-v7a-v1.0.0.apk", "size": "17.3 MiB", "desc": "arm32"}, "x86": {"label": "x86_64", "file": "1kar-x86_64-v1.0.0.apk", "size": "21.1 MiB", "desc": "x86"}};
 words.en.ctaHelp = 'Choose your device’s APK on the next page. Not sure? Universal is available.';
 words.my.ctaHelp = 'သင့်စက်အတွက် APK ကို နောက်စာမျက်နှာတွင် ရွေးပါ။ မသေချာပါက Universal ကို ရယူနိုင်သည်။';
 let lang = new URLSearchParams(window.location.search).has('e') ? 'en' : 'my';
@@ -27,7 +27,8 @@ function render() {
   document.querySelector('#package-name').textContent = pkg.label;
   document.querySelector('#package-desc').textContent = words[lang][pkg.desc];
   document.querySelector('#package-size').textContent = pkg.size;
-  button.href = 'src/apks/v.1.0.0/' + pkg.file;
+  button.href = pkg.url || 'src/apks/v.1.0.0/' + pkg.file;
+  button.toggleAttribute('download', !pkg.url);
   document.querySelector('#device-status').textContent = words[lang][deviceStatus];
   document.querySelector('.fallback').hidden = selected === 'universal';
  }
@@ -85,13 +86,13 @@ function updateSeo() {
 words.en.autoDownload = 'Your APK download was started automatically. Not sure it downloaded? Tap Download APK below to download it again.';
 words.my.autoDownload = 'APK ကို အလိုအလျောက် ဒေါင်းလုဒ် စတင်ထားပါသည်။ ဒေါင်းလုဒ် ရရှိပြီးမပြီး မသေချာပါက အောက်ရှိ APK ဒေါင်းလုဒ် ခလုတ်ကို နှိပ်ပြီး ထပ်မံ ရယူနိုင်ပါသည်။';
 let downloadRequested = false;
-document.querySelectorAll('a[download]').forEach(link => link.addEventListener('click', () => {
+document.querySelectorAll('a[download], #primary-download, .fallback').forEach(link => link.addEventListener('click', () => {
  downloadRequested = true;
 }));
 render();
 recommend().then(() => {
  const button = document.querySelector('#primary-download');
- if (!button || downloadRequested) return;
+ if (!button || downloadRequested || selected === 'universal') return;
  downloadRequested = true;
  const notice = document.createElement('p');
  notice.className = 'auto-download-notice';
