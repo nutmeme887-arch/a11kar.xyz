@@ -1,0 +1,19 @@
+1Kar is an Android app for watching videos.
+
+Browse videos by category
+
+Search videos
+
+Watch them in the app
+
+Burmese and English language
+
+Light and dark mode
+
+Optional PIN lock (calculator style)
+
+Has ads
+
+No account needed
+
+Basically: a simple video watching app for Burmese users.

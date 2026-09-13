@@ -1,0 +1,19 @@
+{
+  "name": "1kar-website",
+  "version": "1.0.0",
+  "description": "Bilingual Burmese and English landing page and Android APK downloads for 1Kar",
+  "scripts": {
+    "build": "npx @tailwindcss/cli -i ./assets/input.css -o ./assets/styles.css --minify",
+    "dev": "npx @tailwindcss/cli -i ./assets/input.css -o ./assets/styles.css --watch",
+    "serve": "python3 -m http.server 8080"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "private": true,
+  "devDependencies": {
+    "@tailwindcss/cli": "^4.3.3",
+    "tailwindcss": "^4.3.3"
+  }
+}
